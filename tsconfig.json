@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "skipLibCheck": true,
+        "target": "es6",
+        "module": "commonjs",
+        "baseUrl": "./source",
+        "lib": ["es2018"],
+        "paths": {
+            "@solver/*": ["./*"]
+        }
+    },
+    "include": [
+        "./source/**/*"
+    ]
+}

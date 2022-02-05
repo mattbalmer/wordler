@@ -1,0 +1,24 @@
+{
+    "name": "wordler",
+    "version": "0.1.0",
+    "description": "Solver template for wordle",
+    "license": "MIT",
+    "scripts": {
+        "start": "tsc --watch",
+        "compile": "tsc",
+        "test": "mocha --require ts-node/register --require tsconfig-paths/register --timeout 60000 -R spec 'tests/**/*.test.ts'"
+    },
+    "devDependencies": {
+        "@types/chai": "^4.2.22",
+        "@types/mocha": "^9.0.0",
+        "@types/node": "^16.10.9",
+        "@types/sinon": "^10.0.4",
+        "chai": "^4.3.4",
+        "mocha": "^9.1.2",
+        "sinon": "^11.1.2",
+        "wordler-core": "^0.1.6",
+        "ts-node": "^10.3.0",
+        "tsconfig-paths": "^3.11.0",
+        "typescript": "^4.4.4"
+    }
+}

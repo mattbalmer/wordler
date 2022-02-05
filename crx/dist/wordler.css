@@ -1,0 +1,38 @@
+#wordler {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    color: #222;
+}
+
+body.nightmode #wordler {
+    color: #eee;
+}
+
+#wordler p {
+    margin: 0;
+    padding: 0;
+}
+
+#wordler ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+#wordler li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+#wordler .wordler-recommendations-list-item {
+    cursor: pointer;
+    padding: 3px 6px;
+    background: #ccc;
+    color: #222;
+    border-radius: 3px;
+}
+#wordler .wordler-recommendations-list-item:hover {
+    background: #eee;
+}
