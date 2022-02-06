@@ -8,6 +8,6 @@ export const RecommendationCard = ({
 }) => {
   // todo context
   return <div style={{}}>
-    <p>{recommendation.word} <span style={{color: '#999'}}>({recommendation.score})</span></p>
+    <p>{recommendation.word} <span style={{color: '#999'}}>({recommendation.infoScore})</span></p>
   </div>
 }
