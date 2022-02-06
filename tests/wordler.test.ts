@@ -7,15 +7,16 @@ import { SAMPLE_100_WORDS } from 'wordler-core/data/sample-100';
 import { OFFICIAL_WORDS } from 'wordler-core/data/official';
 
 const FAILING_WORDS = [
-  'pouts',
-  'bight',
-  'banes',
-  'milch',
-  'minny',
-  'arrow',
-  'alpha',
-  'spilt',
-  'musts',
+  'mauls',
+  // 'pouts',
+  // 'bight',
+  // 'banes',
+  // 'milch',
+  // 'minny',
+  // 'arrow',
+  // 'alpha',
+  // 'spilt',
+  // 'musts',
 ];
 
 describe('Wordler', () => {
@@ -67,7 +68,7 @@ describe('Wordler', () => {
 
         for(let i = 0; i < MAX_GUESSES; i++) {
           const nextGuess = Solver.getNextGuess(wordle);
-          console.log('guess', i, nextGuess);
+          console.log('guess', i + 1, nextGuess);
           wordle.guess(nextGuess);
 
           if (wordle.isSolved) {
@@ -95,7 +96,7 @@ describe('Wordler', () => {
         PLACEMENT.PRESENT,
       ]);
 
-      const { possibilities, requiredLetters } = generatePossibilities(wordle.evaluations);
+      const { possibilities, requiredLetters, unknownLetters } = generatePossibilities(wordle.evaluations);
 
       expect(requiredLetters).to.deep.equal(['c', 'e', 'r']);
       expect(possibilities).to.deep.equal([
@@ -105,6 +106,7 @@ describe('Wordler', () => {
         'bcdfghijlmnopqrstuvwxyz',
         'bcdefghijlmnopqstuvwxyz',
       ]);
+      expect(unknownLetters).to.deep.equal('bdfghijlmnopqstuvwxyz');
     });
   });
 
